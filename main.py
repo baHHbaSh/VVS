@@ -10,14 +10,17 @@ def LoadFile(file):
     return text
 
 def GetPage(PageName):
-    return db[PageName]
+    try:
+        return db[PageName]
+    except:
+        return "<h1>404 Page not found</h1>"
 
 app = Flask(__name__, static_folder="", template_folder="")
 
 PagesList = list(
     map(
         lambda FileName: FileName.split('.')[0],
-        os.listdir("C:\\CodeMaster\\VVS\\Pages")
+        os.listdir(os.getcwd() + "\\Pages")
     )
 )
 
@@ -32,6 +35,11 @@ def main():
 @app.route("/i", methods = ["POST","GET"])
 def i():
     return PagesList
+
+@app.route("/img/<path:path>")
+def img(path):
+    if not path in os.listdir(os.getcwd() + "\\img"): return "img not found"
+    return send_from_directory(app.static_folder + "\\img", path)
 
 '''
 @app.route("/inprodaction", methods = ["GET", "POST"])

@@ -1,41 +1,62 @@
 body{
     color: #084;
     background-color: #333;
-    text-align: justify;
+    text-align: left;
+}
+p, a{
+    font-size: 1.5vw;
 }
 p{
-    font-size: 18px;
+    text-align: justify;
 }
 h1{
     text-align: center;
-    font-size: 42px;
+    font-size: 5vw;
 }
 h2{
-    font-size: 32px;
+    font-size: 3vw;
 }
 a{
     text-decoration: none;
     color: #088;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/*In .code*/
+.code{
+    color: white;
+}
+.r{
+    color: red;
+}
+.y{
+    color: yellow;
+}
+.logo{
+    width: 50%;
 }
 .h{
     display: flex;
     flex-direction: row;
 }
 .left{
-    width: 10vw;
+    width: 20vw;
 }
 .left, .main{
     border: #555 2px solid;
-    padding: 20px;
-    height: 85vh;
+    min-height: 85vh;
     background-color: #222;
 }
 .left{
+    padding: .5vw;
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin-right: 2vw;
 }
 .main{
+    padding: 2vw;
     border-radius: 20px;
     width: 100%;
 }
