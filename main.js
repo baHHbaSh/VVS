@@ -1,7 +1,12 @@
 db = {
     "inprodaction":"0.0 Введение",
     "base": "1.0 Про html",
-    "html1" : "1.1 Заголовки и параграфы"
+    "h": "1.1 Заголовки",
+    "p": "1.2 Параграфы",
+    "div": "1.3 Контейнеры",
+    "button":"1.4 Кнопки",
+    "input": "1.5 Поля ввода",
+    "cssbase": "2.0 Про css"
 }
 let data = document.querySelector("#data")
 let list = document.querySelector("#list")
