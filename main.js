@@ -6,7 +6,8 @@ db = {
     "div": "1.3 Контейнеры",
     "button":"1.4 Кнопки",
     "input": "1.5 Поля ввода",
-    "cssbase": "2.0 Про css"
+    "cssbase": "2.0 Про css",
+    "cssselector": "2.1 css селекторы"
 }
 let data = document.querySelector("#data")
 let list = document.querySelector("#list")
