@@ -33,6 +33,10 @@ img{
     width: initial;
     margin-top: 50px;
 }
+.bg{
+    background-color: #0007;
+    border-radius: 10px;
+}
 .r{
     color: rgb(137, 247, 255);
 }

@@ -7,7 +7,10 @@ db = {
     "button":"1.4 Кнопки",
     "input": "1.5 Поля ввода",
     "cssbase": "2.0 Про css",
-    "cssselector": "2.1 css селекторы"
+    "cssselector": "2.1 css селекторы",
+    "csscolor": "2.2 css цвета",
+    "flex": "2.3 display (flex)",
+    "align": "2.4 Привязки текста и элементов"
 }
 let data = document.querySelector("#data")
 let list = document.querySelector("#list")
@@ -74,5 +77,9 @@ function ReplaceDataInCode(){
         })
         NewText = NewText.replace("\n", "\n")
         El.innerHTML = NewText
+    })
+    let par = document.querySelectorAll("p")
+    par.forEach(el=>{
+        el.innerHTML = el.innerHTML.replace("&lt;", "<b class=\"bg\">&lt;").replace("&gt;", "&gt;</b>")
     })
 }
