@@ -36,7 +36,7 @@ function LinkNameToAction(){
             let name = db[Element.innerHTML]
             Element.innerHTML = name != undefined ? name: Element.innerHTML
         }catch{}
-        Element.addEventListener("click", ()=>{LoadPage(getKeyByValue(db, Element.innerHTML))})
+        Element.addEventListener("click", ()=>{LoadPage(getKeyByValue(db, Element.innerHTML)); localStorage.setItem("last",getKeyByValue(db, Element.innerHTML))})
     })
 }
 
@@ -46,7 +46,8 @@ let LoadPage = (path) => {
     .then(text=>{data.innerHTML = text; LinkNameToAction(); ReplaceDataInCode()})
 }
 
-LoadPage("inprodaction")
+let LastPage = localStorage.getItem("last")
+LoadPage(LastPage != null? LastPage:"inprodaction")
 
 function LoadInner(){
     let ArrayNames = new Array()
