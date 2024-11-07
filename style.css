@@ -3,18 +3,22 @@ body{
     background-color: #333;
     text-align: left;
 }
-p, a{
-    font-size: 1.5vw;
+a,p{
+    word-break: break-all;
+}
+a{
+    font-size: 14px;
 }
 p{
     text-align: justify;
+    font-size: 24px
 }
 h1{
     text-align: center;
-    font-size: 5vw;
+    font-size: 50px;
 }
 h2{
-    font-size: 3vw;
+    font-size: 32px;
 }
 a{
     text-decoration: none;
@@ -54,7 +58,7 @@ img{
     width: 20vw;
 }
 .left, .main{
-    border: #555 2px solid;
+    border: #444 2px solid;
     min-height: 85vh;
     background-color: #222;
 }

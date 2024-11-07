@@ -10,7 +10,8 @@ db = {
     "cssselector": "2.1 css селекторы",
     "csscolor": "2.2 css цвета",
     "flex": "2.3 display (flex)",
-    "align": "2.4 Привязки текста и элементов"
+    "align": "2.4 Привязки текста и элементов",
+    "border": "2.5 Границы и рамки"
 }
 let data = document.querySelector("#data")
 let list = document.querySelector("#list")
@@ -36,7 +37,7 @@ function LinkNameToAction(){
             let name = db[Element.innerHTML]
             Element.innerHTML = name != undefined ? name: Element.innerHTML
         }catch{}
-        Element.addEventListener("click", ()=>{LoadPage(getKeyByValue(db, Element.innerHTML)); localStorage.setItem("last",getKeyByValue(db, Element.innerHTML))})
+        Element.addEventListener("click", ()=>{LoadPage(getKeyByValue(db, Element.innerHTML)); localStorage.setItem("last",getKeyByValue(db, Element.innerHTML)); LoadInner()})
     })
 }
 

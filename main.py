@@ -41,6 +41,10 @@ def img(path):
     if not path in os.listdir(os.getcwd() + "\\img"): return "img not found"
     return send_from_directory(app.static_folder + "\\img", path)
 
+@app.route("/favicon")
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(app.static_folder, "favicon.ico")
 '''
 @app.route("/inprodaction", methods = ["GET", "POST"])
 def Inprodaction():
